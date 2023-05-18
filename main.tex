@@ -1,0 +1,60 @@
+\documentclass[10pt,twoside,openany]{book}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{subfiles}
+\usepackage{fancyhdr}
+\usepackage{epigraph}
+\usepackage{url}
+\usepackage{makecell}
+\usepackage[titletoc]{appendix}
+\title{Translation of Machine Learning and Additive Manufacturing for a Diverse Scientific and Defense Workforce}
+\author{Jordan C Hanson, PhD \\ Associate Professor of Physics and Astronomy \\ Whittier College \\ Whittier, CA}
+\date{\today}
+\usepackage[book]{ragged2e}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jordan C Hanson, PhD}
+\lhead{Translation of Machine Learning and Additive Manufacturing}
+\rfoot{\thepage}
+
+\begin{document}
+
+\maketitle
+\begin{flushleft}
+\subfile{sections/project_summary/project_summary}
+\end{flushleft}
+
+\tableofcontents
+
+\chapter{Project Description}
+\begin{flushleft}
+\subfile{sections/project_description/project_description}
+\end{flushleft}
+
+%\chapter{Scholarship}
+%\begin{flushleft}
+%\subfile{sections/scholarship/scholarship}
+%\end{flushleft}
+%
+%\chapter{Service}
+%\begin{flushleft}
+%\subfile{sections/service/service}
+%\end{flushleft}
+%
+%\chapter{Advising and Mentoring}
+%\begin{flushleft}
+%\subfile{sections/advising_mentoring/advising_mentoring}
+%\end{flushleft}
+%
+%\chapter{Conclusion}
+%\begin{flushleft}
+%\subfile{sections/conclusion/conclusion}
+%\end{flushleft}
+
+\small
+\bibliographystyle{ieeetr}
+\bibliography{bibliography}
+ 
+\end{document}
