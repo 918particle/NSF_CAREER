@@ -10,6 +10,9 @@
 \usepackage[book]{ragged2e}
 \pagestyle{empty}
 
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+
 \begin{document}
 
 \begin{flushleft}
@@ -22,31 +25,19 @@
 
 \maketitle
 \tableofcontents
+\thispagestyle{empty}
 
-\chapter{Project Description}
+\chapter{Project Description: Intellectual Merits}
+\thispagestyle{empty}
 \begin{flushleft}
-\subfile{sections/project_description/project_description}
+\subfile{sections/project_description/project_description_im}
 \end{flushleft}
 
-%\chapter{Scholarship}
-%\begin{flushleft}
-%\subfile{sections/scholarship/scholarship}
-%\end{flushleft}
-%
-%\chapter{Service}
-%\begin{flushleft}
-%\subfile{sections/service/service}
-%\end{flushleft}
-%
-%\chapter{Advising and Mentoring}
-%\begin{flushleft}
-%\subfile{sections/advising_mentoring/advising_mentoring}
-%\end{flushleft}
-%
-%\chapter{Conclusion}
-%\begin{flushleft}
-%\subfile{sections/conclusion/conclusion}
-%\end{flushleft}
+\chapter{Project Description: Broader Impacts}
+\thispagestyle{empty}
+\begin{flushleft}
+\subfile{sections/project_description/project_description_ba}
+\end{flushleft}
 
 \small
 \bibliographystyle{ieeetr}
