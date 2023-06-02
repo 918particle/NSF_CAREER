@@ -1,3 +1,46 @@
+@article{doi:10.1137/20M1337041,
+author = {Bui, Kevin and Park, Fredrick and Lou, Yifei and Xin, Jack},
+title = {A Weighted Difference of Anisotropic and Isotropic Total Variation for Relaxed Mumford--Shah Color and Multiphase Image Segmentation},
+journal = {SIAM Journal on Imaging Sciences},
+volume = {14},
+number = {3},
+pages = {1078-1113},
+year = {2021},
+doi = {10.1137/20M1337041},
+
+URL = { 
+    
+        https://doi.org/10.1137/20M1337041
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/20M1337041
+    
+    
+
+},
+abstract = { In a class of piecewise-constant image segmentation models, we propose to incorporate a weighted difference of anisotropic and isotropic total variation (AITV) to regularize the partition boundaries in an image. In particular, we replace the total variation regularization in the Chan--Vese segmentation model and a fuzzy region competition model by the proposed AITV. To deal with the nonconvex nature of AITV, we apply the difference-of-convex algorithm (DCA), in which the subproblems can be minimized by the primal-dual hybrid gradient method with linesearch. The convergence of the DCA scheme is analyzed. In addition, a generalization to color image segmentation is discussed. In the numerical experiments, we compare the proposed models with the classic convex approaches and the two-stage segmentation methods (smoothing and then thresholding) on various images, showing that our models are effective in image segmentation and robust with respect to impulsive noises. }
+}
+
+
+
+@article{SHI201528,
+title = {Parallelization of a color-entropy preprocessed Chan–Vese model for face contour detection on multi-core CPU and GPU},
+journal = {Parallel Computing},
+volume = {49},
+pages = {28-49},
+year = {2015},
+issn = {0167-8191},
+doi = {https://doi.org/10.1016/j.parco.2015.07.002},
+url = {https://www.sciencedirect.com/science/article/pii/S0167819115001052},
+author = {Xiaohua Shi and Fredrick Park and Lina Wang and Jack Xin and Yingyong Qi},
+keywords = {Face detection, Color-entropy preprocessing, Chan–Vese segmentation model, Parallelization},
+abstract = {Face tracking is an important computer vision technology that has been widely adopted in many areas, from cell phone applications to industry robots. In this paper, we introduce a novel way to parallelize a face contour detecting application based on the color-entropy preprocessed Chan–Vese model utilizing a total variation G-norm. This particular application is a complicated and unsupervised computational method requiring a large amount of calculations. Several core parts therein are difficult to parallelize due to heavily correlated data processing among iterations and pixels. We develop a novel approach to parallelize the data-dependent core parts and significantly improve the runtime performance of the model computation. We implement the parallelized program on OpenCL for both multi-core CPU and GPU. For 640 * 480 input images, the parallelized program on a NVidia GTX970 GPU, a NVidia GTX660 GPU, and an AMD FX8530 8-core CPU is on average 18.6, 12.0 and 4.40 times faster than its single-thread C version on the AMD FX8530 CPU, respectively. Some parallelized routines have much higher performance improvement compared to the whole program. For instance, on the NVidia GTX970 GPU, the parallelized entropy filter routine is on average 74.0 times faster than its single-thread C version on the AMD FX8530 8-core CPU. We discuss the parallelization methodologies in detail, including the scalability, thread models, as well as synchronization methods for both multi-core CPU and GPU.}
+}
+
 @article{10.1103/physrevd.84.103003, 
 year = {2011}, 
 title = {{Practical and accurate calculations of Askaryan radiation}}, 
@@ -499,6 +542,30 @@ note= {MeepCon 2022},
 URL= {https://meepcon.github.io/},
 }
 
+@unpublished{meepcon2022_3,
+title= {Ultracompact Nanophotonic Devices and Diffractive Structures for Imaging},
+author = {Majumder, A.},
+year = {2022},
+note= {MeepCon 2022},
+URL= {https://meepcon.github.io/},
+}
+
+@unpublished{meepcon2022_4,
+title= {Tutorial \#2: Diffraction Efficiency of Binary Gratings},
+author = {Oskooi, A.},
+year = {2022},
+note= {MeepCon 2022},
+URL= {https://meepcon.github.io/},
+}
+
+
+@unpublished{meepcon2022_5,
+title= {Tutorial \#3: Inverse Design of a Power Splitter for Silicon Photonics},
+author = {Hammond, A.M.},
+year = {2022},
+note= {MeepCon 2022},
+URL= {https://meepcon.github.io/},
+}
 @ARTICLE{yurduseven,
   author={Yurduseven, O. and Ye, S. and Fromenteze, T. and Wiley, B.J. and Smith, D.R.},
   journal={Designs}, 
