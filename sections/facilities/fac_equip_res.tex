@@ -1,54 +1,46 @@
 \documentclass[../../main.tex]{subfiles}
-
-%This section of the proposal is used to assess the adequacy of the resources available to perform the effort proposed to satisfy both the Intellectual Merit and Broader Impacts review criteria. Proposers should describe only those resources that are directly applicable. Proposers should include an aggregated description of the internal and external resources (both physical and personnel) that the organization and its collaborators, and subawardees will provide to the project, should it be funded. Such information must be provided in this section, in lieu of other parts of the proposal (e.g., Budget Justification, Project Description). The description should be narrative in nature and must not include any quantifiable financial information.
  
 \begin{document}
 \label{sec:fac_equip_res}
 
-\begin{figure}[hb]
-\centering
-\includegraphics[width=0.2\textwidth]{figures/3dprinter.jpg}
-\includegraphics[width=0.2\textwidth]{figures/3dprinter_2.jpg}
-\caption{\label{fig:3d_print_fac} (Left) MakerBot 3D printer, with PLA horn model (white), and  proto-pasta with SMA connector (black). (Right) Close-up of horns.}
-\end{figure}
+\textbf{Facilities, Equipment, and Other Resources.}  Whittier College is a Title V HSI, with a mission to elevate undergraduate students from the communities of Los Angeles and beyond into academic achievement and scientific progress.  Piece by piece, we have established a research lab capable of supporting complex projects that merit NSF awards.  Part of this growth includes establishing a public-private partnership with a US Navy Lab called an educational partnership agreement (EPA).  Our EPA has facilitated technology transfers that will greatly benefit our proposed research.  Further, we have already used start-up grants to prepare for the work.  Finally, we have a strong tradition of privately funded undergraduate research fellowships at Whittier College, including the Keck Fellowship, the Fletcher-Jones Fellowship, and the Ondrasik-Groce Fellowship.  Having used these instruments to prepare our institution, we believe we are well-equipped to perform the proposed work.  We first describe the \textit{computational resources} we have acquired that are relevant for the CEM calculations in our proposal.  Second, we describe the \textit{additive manufacturing} resources we have acquired relevant for the proposal.  Third, we discuss the relevant RF testing and calibration resources we have acquired.  Finally, we focus on \textit{human resources} by demonstrating a track record of performing research with undergraduates funded through research fellowships. \\ \vspace{2.5mm}
 
+\textbf{Computational Resources.} Using our start-up grant, we have acquired a System76 Thelio desktop system with AMD Ryzen Threadripper 3990x 64-core, 128 thread CPU.  The system has 0.5 GB of volatile memory per thread, 4.3 TB of permanent storage, and a NVIDIA GeForce GTX 1650 GPU.  The system was used in Summer 2022 to create our 3D open-source CAD models of broadband RF antennas, and to run the associated CEM computations in parallel.  Running our CEM calculations in parallel accelerated results by an order of magnitude.  Multiple on-campus users can utilize this system as a CEM server.  The number of simultaneous users or jobs is limited by the 0.5 GB of memory per thread.  The system can be easily upgraded to handle more users.  To facilitate scanning large parameter spaces for optimized phased array designs using machine learning, we will begin by using the Thelio system as a training ground for our more complex runs.  The Thelio can be easily upgraded with more memory and storage.  As the complexity of the research grows, we can expand to a more powerful system as neccessary.  Because of our experience with System76, we will perform market research on the System76 Jack and Ibex GPU server lines before recommending upgrades.  \\ \vspace{2.5mm}
 
-In Summer 2022, we received a third ONR fellowship focusing on GPS modernization\footnote{ONR regulations state that a gap year is required.  For our group, Senior Fellowship eligibility begins in Summer 2024.}.  Alongside this work, we continued to refine the open-source CEM results.  We learned to simulate the full 3D horns stored in CAD files using parallel processing, achieving an order of magnitude reduction in computation time.  The results are shown in Fig. \ref{fig:3d_cad}.  In Fig. \ref{fig:3d_cad} (a), the main lobes are designed to point to 0 degrees (x-direction) for the E-plane (x-y plane), and 90 degrees for the H-plane (x-z plane).  The E-plane contains the linearly polarized radiation vector.  In Fig. \ref{fig:3d_cad} (b), the voltage standing wave ratio (VSWR) is shown.  The VSWR is a common figure of merit for RF antennas, related to the S-parameters.  The VSWR approaches 1 for an efficiently radiating antenna, and infinity for no efficiency.  The radiation patterns match expectations for horn antennas (see Fig. 19 of \cite{8786183}).  The VSWR results demonstrate efficient radiation in the bandwidth [0.5 - 6] GHz.  We presented our progress at the annual MeepCon 2022 at the Massachusetts Institute of Technology (MIT) \cite{meepcon2022}.  We learned new techniques for integrating MEEP and machine learning tools \cite{meepcon2022_2}, and how eager MEEP developers are to collaborate in the RF regime.  \\ \vspace{2.5mm}
+\textbf{3D Printing Resources.}  Our laboratories are located in the Science and Learning Center of Whittier College, completed in 2016.  The SLC includes a machine shop with standard machine tools for traditional RF antenna construction, including a mill, lathe, drill press, band saw and safety equipment.  Our machine shop is also home to our MakerBot Replicator Z18, and we have since upgraded it with an Olsson Ruby extruder tip.  The ruby tip can withstand higher extruder temperatures without changing shape over time.  This makes it a better choice for 3D printing with the Electrifi filament we propose to use.  We are therefore equipped to start our project using the MakerBot 3D printer.  We plan to upgrade as necessary to Prusa and TriLab printers, since these are recommended by experts for use with the Electrifi metal-doped filament.  The SLC is home to staff in our department and the Department of Chemistry who have experience repairing and operating our 3D printer.  Thus, we are well-equipped to begin a multi-year project based on additive manufacturing with novel materials. \\ \vspace{2.5mm}
 
-\subsection{RF Laboratory Capability and Prior ONR Funding}
+\textbf{RF Testing and Calibration Resources.}  We have now begun an Educational Partnership Agreement (EPA) between Whittier College and a US Naval Research lab called NSWC Corona.  Through the technology transfer portion of the EPA, NSWC Corona has provided RF bench testing equipment that is perfectly suited to the proposed work.  A list of instruments transferred from NSWC Corona between 2020 and 2023 is shown in Tab. \ref{tab:equip}.  Our network analyzer and power sensors can perform S-parameter measurements over [9 kHz - 6 GHz] for our antennas under test (AUT).  Our signal generator can create calibration signals for our calibration antennas and AUT over [250 kHz - 6 GHz].  Our calibration antennas serve as benchmark devices for comparison to our 3D printed AUT.  Regular calibration is required for these devices, and our calibration kits serve this purpose.  Using our start-up grant, we have also acquired a Tektronix MDO 3024.  This mixed domain oscilloscope (MDO) is equipped with four analogue RF channels, and a fifth RF channel as spectrum analyzer.  The MDO 3024 can also accept 16 digital inputs simultaneous to the analogue channels.  The scope is perfect for low-frequency testing and verification of RF antennas and circuits.  Our laboratory is therefore well-equipped to complete the proposed work, and this minimizes budgetary impact.  The main area to upgrade is the bandwidth of the MDO 3024, which should be increased from 200 MHz to at least 1.5 GHz.  \\ \vspace{2.5mm}
 
-We are required to take a research gap year in Summer 2023, according to ONR regulations.  However, we have now begun an Educational Partnership Agreement (EPA) between NSWC Corona and Whittier College.  NSWC Corona now has the ability to transfer laboratory equipment to Whittier College.  NSWC Corona has provided RF bench testing equipment that is perfectly suited to the proposed work.  A list of instruments transferred from NSWC Corona between 2020 and 2023 is shown in Tab. \ref{tab:equip}.  Our network analyzer and power sensors can perform S-parameter measurements over [9 kHz - 6 GHz] for our antennas under test (AUT).  Our signal generator can create calibration signals for our calibration antennas and AUT over [250 kHz - 6 GHz].  Our calibration antennas serve as benchmark devices for comparison to our 3D printed AUT.  Due to the precision and wide bandwith of these devices, regular calibration is required.  Our calibration kits serve this purpose.  Our laboratory is therefore well-equipped to complete the proposed work, and this minimizes budgetary impact. \\ \vspace{2.5mm}
-
-This research has been completed with significant contributions from diverse undergraduate students.  We provide a summary of funding for personnel that have contributed to the early stages of this work in Tab. \ref{tab:funds}.  These researchers have diverse majors and interests, including our 3-2 Engineering Program (Wildanger), Physics and Math double major (Hartig), and Math/Integrated Computer Science (G\'{o}mez-Reed and Householder), and Physics and Astronomy (Goodman and Smith).   After Whittier College, these students have begun science and engineering roles that include the Laser Interferometer Gravitational-Wave Observatory (LIGO), the University of Southern California (USC), and The Aerospace Corporation.  Whittier College has a good track record of providing access to higher education, and careers in science and technology, to diverse students from Los Angeles County and beyond. \\ \vspace{2.5mm}
+\textbf{Human Resources.} Our research in CEM and additive manufacturing to date has been completed with significant contributions from diverse undergraduate students.  We provide a summary of contributions from undergraduate personnel, and ONR faculty fellowships, to the early stages of this work in Tab. \ref{tab:funds}.  These researchers have diverse majors and interests, including our 3-2 Engineering Program (Wildanger), Physics and Math double major (Hartig), and Math/Integrated Computer Science (G\'{o}mez-Reed and Householder), and Physics and Astronomy (Goodman and Smith).   After Whittier College, these students have begun science and engineering roles with the Laser Interferometer Gravitational-Wave Observatory (LIGO) Collaboration, the University of Southern California (USC), and The Aerospace Corporation.  Whittier College, and especially the Departments of Physics and Astronomy, and Mathematics and Computer Science, have a good track record of mentoring undergraduate fellowships in STEM.  We seek to expand this practice through NSF-sponsored opportunities in additive manufacturing, CEM, and machine learning.\\ \vspace{2.5mm}
 
 \begin{table}
 \centering
-\begin{tabular}{c c c}
-Equipment & Bandwidth & Cost \\ \hline
-Rohde and Schwartz ZVL6 Network Analyzer & 9 kHz to 6 GHz & \$20k \\
-Rohde and Schwartz NRP-91 Power Sensors (2) & 9 kHz to 6 GHz & \$8k \\
-Aeroflex 3416 Digital RF Signal Generator & 250kHz to 6 GHz & \$12k \\
-Calibration antenna kits (2) & Varies by antenna & \$2k \\
-Calibration test kits for Network Analyzer (2) & 6 kHz to 9 GHz & \$6k
+\begin{tabular}{c c}
+Equipment & Bandwidth \\ \hline
+Rohde and Schwartz ZVL6 Network Analyzer & 9 kHz to 6 GHz \\
+Rohde and Schwartz NRP-91 Power Sensors (2) & 9 kHz to 6 GHz \\
+Aeroflex 3416 Digital RF Signal Generator & 250kHz to 6 GHz \\
+Calibration antenna kits (2) & Varies by antenna \\
+Calibration test kits for Network Analyzer (2) & 6 kHz to 9 GHz
 \end{tabular}
 \caption{\label{tab:equip} A listing of the equipment provided to our labs by the Office of Naval Research.}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{c c c c}
-Student/Professor & Grant Opportunity & Amount & Dates \\ \hline
-Jordan C. Hanson & ONR Summer Faculty Fellow & \$16.5k & Summer 2022 \\
-Dane Goodman & Summer researcher & Course credit & Summer 2022 \\
-Andrew Householder & Summer researcher & Course credit & Summer 2022 \\
-Raymond Hartig & Ondrasik-Groce Fellowship & \$5k & Summer 2022 \\
-Jordan C. Hanson & ONR Summer Faculty Fellow & \$16.5k & Summer 2021 \\
-Adam Wildanger & Fletcher Jones Fellowship & \$5k & Summer 2021 \\
-Jordan C. Hanson & ONR Summer Faculty Fellow & \$16.5k & Summer 2020 \\
-Raymond Hartig & Fletcher Jones Fellowship & \$5k & Summer 2020 \\
-John Paul G\'{o}mez-Reed & Ondrasik-Groce Fellowship & \$7.5k & Summer-Fall 2019 \\
-John Paul G\'{o}mez-Reed & Keck Fellowship & \$5k & Summer 2018 \\
-Cassady Smith & Keck Fellowship & \$5k & Summer 2018 \\
+\begin{tabular}{c c c}
+Student/Professor & Grant Opportunity & Dates \\ \hline
+Jordan C. Hanson & ONR Summer Faculty Fellow & Summer 2022 \\
+Dane Goodman & Summer researcher & Summer 2022 \\
+Andrew Householder & Summer researcher & Summer 2022 \\
+Raymond Hartig & Ondrasik-Groce Fellowship & Summer 2022 \\
+Jordan C. Hanson & ONR Summer Faculty Fellow & Summer 2021 \\
+Adam Wildanger & Fletcher Jones Fellowship & Summer 2021 \\
+Jordan C. Hanson & ONR Summer Faculty Fellow & Summer 2020 \\
+Raymond Hartig & Fletcher Jones Fellowship & Summer 2020 \\
+John Paul G\'{o}mez-Reed & Ondrasik-Groce Fellowship & Summer-Fall 2019 \\
+John Paul G\'{o}mez-Reed & Keck Fellowship & Summer 2018 \\
+Cassady Smith & Keck Fellowship & Summer 2018
 \end{tabular}
 \caption{\label{tab:funds} A listing of the grant opportunities awarded to our group for RF design, softrware development, and machine-learning.  All students are at the undergraduate level.}
 \end{table}
